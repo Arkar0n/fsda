@@ -1,8 +1,7 @@
-name: Amt Test
+name: Netlify Test
 on:
   schedule:
-  - cron: "*/5 * * * *"
-  #- cron: "*/5 3-8 * * 1-5"
+  - cron: "5 3-8 * * 1-5"
   push:
     branches: [ main, master ]
   pull_request:
@@ -21,7 +20,7 @@ jobs:
     - name: Install Playwright Browsers
       run: npx playwright install --with-deps
     - name: Run Playwright tests
-      run: npx playwright test amt
+      run: npx playwright test netlify
     - uses: actions/upload-artifact@v4
       if: always()
       with:
