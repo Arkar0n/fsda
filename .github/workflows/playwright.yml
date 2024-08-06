@@ -1,7 +1,6 @@
 name: Amt Test
 on:
   schedule:
-  - cron: "*/5 * * * 1-5"
   push:
     branches: [ main, master ]
   pull_request:
